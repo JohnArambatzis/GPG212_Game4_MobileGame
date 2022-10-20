@@ -46,35 +46,35 @@ public class EnemySpawner : MonoBehaviour
 
         if (spawnLocation == 1)
         {
-            Instantiate(enemy1, spawnOne.transform);
+            Instantiate(enemy1, new Vector3(11 , 0, 0), Quaternion.identity);
         }
         if (spawnLocation == 2)
         {
-            Instantiate(enemy1, spawnTwo.transform);
+            Instantiate(enemy1, new Vector3(-11, 0, 0), Quaternion.identity);
         }
         if (spawnLocation == 3)
         {
-            Instantiate(enemy1, spawnThree.transform);
+            Instantiate(enemy1, new Vector3(11, 8, 0), Quaternion.identity);
         }
         if (spawnLocation == 4)
         {
-            Instantiate(enemy1, spawnFour.transform);
+            Instantiate(enemy1, new Vector3(0, -8, 0), Quaternion.identity);
         }
         if (spawnLocation == 5)
         {
-            Instantiate(enemy1, spawnFive.transform);
+            Instantiate(enemy1, new Vector3(11, -8, 0), Quaternion.identity);
         }
         if (spawnLocation == 6)
         {
-            Instantiate(enemy1, spawnSix.transform);
+            Instantiate(enemy1, new Vector3(-11, -8, 0), Quaternion.identity);
         }
         if (spawnLocation == 7)
         {
-            Instantiate(enemy1, spawnSeven.transform);
+            Instantiate(enemy1, new Vector3(11, 8, 0), Quaternion.identity);
         }
         if (spawnLocation == 8)
         {
-            Instantiate(enemy1, spawnEight.transform);
+            Instantiate(enemy1, new Vector3(-11, 8, 0), Quaternion.identity);
         }
     }
 }

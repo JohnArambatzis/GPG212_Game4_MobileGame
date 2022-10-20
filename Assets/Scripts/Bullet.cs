@@ -19,6 +19,8 @@ public class Bullet : MonoBehaviour
         enemy = GameObject.FindWithTag("Enemy");
         resourceHolder = GameObject.FindWithTag("Resource Holder");
 
+        bulletDamage += resourceHolder.GetComponent<GameResources>().bulletExtraDamage;
+
         rb = this.GetComponent<Rigidbody2D>();
     }
     void Update()
@@ -47,7 +49,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.transform.tag == "Enemy")
         {
-            enemy.GetComponent<Enemy>().health -= bulletDamage;
+            collision.GetComponent<Enemy>().health -= bulletDamage;
             Destroy(gameObject);
         }
 

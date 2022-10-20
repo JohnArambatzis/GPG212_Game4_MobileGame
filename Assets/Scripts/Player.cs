@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public float gold = 0;
     public TextMeshProUGUI goldAmountText;
 
+    public GameObject player;
     public GameObject resourceHolder;
     public GameObject bullet;
     public Transform weaponSpawn;
@@ -29,7 +30,8 @@ public class Player : MonoBehaviour
         {
             if (bulletCooldown <= 0)
             {
-                Instantiate(bullet, weaponSpawn.transform);
+                Instantiate(bullet, new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z), Quaternion.identity);
+
                 bulletCooldown = bulletTimer;
             }
         }
