@@ -9,6 +9,7 @@ public class Bullet2 : MonoBehaviour
 
     public float moveSpeed = 5f;
     public float bulletDamage = 2;
+    public float timer = 5f;
 
 
     private Rigidbody2D rb;
@@ -35,6 +36,11 @@ public class Bullet2 : MonoBehaviour
         movement = direction;
 
         if (resourceHolder.GetComponent<EnemySpawner>().enemyAmount <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+        if (timer <= 0)
         {
             Destroy(gameObject);
         }
