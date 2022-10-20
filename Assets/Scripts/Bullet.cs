@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour
     public GameObject resourceHolder;
     public GameObject enemy;
 
+    public int bullet = 1;
+
     public float moveSpeed = 5f;
     public float bulletDamage = 2;
     public float timer = 5f;
@@ -21,7 +23,15 @@ public class Bullet : MonoBehaviour
         enemy = GameObject.FindWithTag("Enemy");
         resourceHolder = GameObject.FindWithTag("Resource Holder");
 
-        bulletDamage += resourceHolder.GetComponent<GameResources>().bulletExtraDamage;
+        if (bullet == 1)
+        {
+            bulletDamage += resourceHolder.GetComponent<GameResources>().bulletExtraDamage;
+        }
+        if (bullet == 2)
+        {
+            bulletDamage += resourceHolder.GetComponent<GameResources>().bulletExtraDamage2;
+        }
+
 
         rb = this.GetComponent<Rigidbody2D>();
     }

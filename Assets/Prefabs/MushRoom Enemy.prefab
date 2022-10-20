@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4381667209245078791}
   - component: {fileID: 4381667209245078790}
   - component: {fileID: 4381667209245078786}
-  m_Layer: 0
-  m_Name: MushRoom Enemy
+  m_Layer: 8
+  m_Name: Mushroom Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,8 +123,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceHolder: {fileID: 0}
   player: {fileID: 0}
-  moveSpeed: 2
-  health: 5
+  moveSpeed: 1.8
+  health: 4
+  gold: 1
   enemyDamage: 1
   attackCooldown: 3
   attackTimer: 3
@@ -138,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4381667210480570332}
   - component: {fileID: 4381667210480570333}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

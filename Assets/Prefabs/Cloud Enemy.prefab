@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4381667209245078790}
   - component: {fileID: 4381667209245078786}
   m_Layer: 8
-  m_Name: PlantMonster Enemy
+  m_Name: Cloud Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,12 +123,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceHolder: {fileID: 0}
   player: {fileID: 0}
-  moveSpeed: 0.8
-  health: 12
-  gold: 5
-  enemyDamage: 5
-  attackCooldown: 4
-  attackTimer: 4
+  moveSpeed: 2.2
+  health: 1
+  gold: 1
+  enemyDamage: 1
+  attackCooldown: 6
+  attackTimer: 6
+  isBoss: 0
+  isWeak: 1
 --- !u!1 &4381667210480570334
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +204,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 497161824, guid: 0c1e734fa85636743af3bc22c6d99ba8, type: 3}
+  m_Sprite: {fileID: -600867422, guid: 0c1e734fa85636743af3bc22c6d99ba8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -15,6 +15,9 @@ public class Enemy : MonoBehaviour
     public float attackCooldown = 3;
     public float attackTimer = 3;
 
+    public bool isBoss = false;
+    public bool isWeak = false;
+
 
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -28,7 +31,23 @@ public class Enemy : MonoBehaviour
 
         rb = this.GetComponent<Rigidbody2D>();
 
-        health = health + resourceHolder.GetComponent<GameResources>().enemyExtraHealth;
+        if(isBoss == false)
+        {
+            if (isWeak == false)
+            {
+                health = health + resourceHolder.GetComponent<GameResources>().enemyExtraHealth;
+            }
+            if (isWeak == true)
+            {
+                health = health + resourceHolder.GetComponent<GameResources>().weakEnemyExtraHealth;
+            }
+        }
+        if (isBoss == true)
+        {
+            health = health + resourceHolder.GetComponent<GameResources>().bossExtraHealth;
+        }
+
+
         gold = gold + resourceHolder.GetComponent<GameResources>().enemyExtraGold;
     }
     void Update()
@@ -47,6 +66,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             player.GetComponent<Player>().gold += gold;
+            player.GetComponent<Player>().score += 1;
             player.GetComponent<Player>().updateVariables = true;
 
             Destroy(gameObject);
