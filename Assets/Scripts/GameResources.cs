@@ -8,6 +8,8 @@ public class GameResources : MonoBehaviour
     public float enemyExtraHealth = 0;
     public float bossExtraHealth = 0;
 
+    public float enemyExtraGold = 0;
+
 
     void Start()
     {
@@ -20,6 +22,8 @@ public class GameResources : MonoBehaviour
         timer += Time.deltaTime;
 
         enemyExtraHealth = timer * 0.1f;
+        enemyExtraGold = timer * 0.1f;
+
         bossExtraHealth = timer;
     }
 }

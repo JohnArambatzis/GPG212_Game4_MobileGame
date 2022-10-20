@@ -31,6 +31,11 @@ public class Bullet : MonoBehaviour
 
         direction.Normalize();
         movement = direction;
+
+        if (resourceHolder.GetComponent<EnemySpawner>().enemyAmount <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void FixedUpdate()
