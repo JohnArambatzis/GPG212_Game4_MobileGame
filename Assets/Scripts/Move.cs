@@ -8,7 +8,7 @@ public class Move : MonoBehaviour
 
     void Update()
     {
-        if (Input.touchCount > 0 && resourceHolder.GetComponent<PanelController>().isPaused == false)
+        if (Input.touchCount > 0 && resourceHolder.GetComponent<PanelController>().isPaused == false && Time.timeScale > 0)
         {
             Touch touch = Input.GetTouch(0);
             Vector3 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);

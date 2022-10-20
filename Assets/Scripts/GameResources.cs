@@ -41,10 +41,10 @@ public class GameResources : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        weakEnemyExtraHealth = timer * 0.1f;
-        enemyExtraHealth = timer * 0.25f;
+        weakEnemyExtraHealth = timer * 0.06f;
+        enemyExtraHealth = timer * 0.2f;
         enemyExtraGold = timer * 0.06f;
-        bossExtraHealth = timer * 0.4f;
+        bossExtraHealth = timer * 0.32f;
     }
 
     public void BulletUpgradeDamage()

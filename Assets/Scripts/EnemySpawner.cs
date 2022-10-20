@@ -64,7 +64,7 @@ public class EnemySpawner : MonoBehaviour
         }
         
 
-        if (gameLength >= 20 && secondMonster == false)
+        if (gameLength >= 25 && secondMonster == false)
         {
             secondMonsterSpawn = true;
             secondMonster = true;
@@ -80,7 +80,7 @@ public class EnemySpawner : MonoBehaviour
         }
 
 
-        if (gameLength >= 50 && thirdMonster == false)
+        if (gameLength >= 60 && thirdMonster == false)
         {
             thirdMonsterSpawn = true;
             thirdMonster = true;
@@ -95,7 +95,7 @@ public class EnemySpawner : MonoBehaviour
             spawnCooldown3 = spawnTimer3;
         }
 
-        if (gameLength >= 80 && forthMonster == false)
+        if (gameLength >= 100 && forthMonster == false)
         {
             forthMonsterSpawn = true;
             forthMonster = true;
@@ -232,7 +232,7 @@ public class EnemySpawner : MonoBehaviour
     }
     #endregion
 
-    #region Enemy 3
+    #region Enemy 4
     public void EnemyFourSpawn()
     {
         spawnLocation = Random.Range(1, 8);

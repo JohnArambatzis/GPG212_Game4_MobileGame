@@ -32,12 +32,14 @@ public class Player : MonoBehaviour
     public bool updateVariables = false;
 
     public GameObject gameOverPanel;
+    public GameObject shopButton;
 
     void Update()
     {
         if (health <= 0)
         {
             gameOverPanel.SetActive(true);
+            shopButton.SetActive(false);
             Time.timeScale = 0;
         }
 
