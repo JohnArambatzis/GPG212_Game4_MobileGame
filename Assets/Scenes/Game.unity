@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 543515319}
   - component: {fileID: 543515318}
   m_Layer: 5
-  m_Name: Player Gold Value
+  m_Name: Player Gold Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -858,6 +858,7 @@ MonoBehaviour:
   timer: 0
   enemyExtraHealth: 0
   bossExtraHealth: 10
+  enemyExtraGold: 0
 --- !u!4 &743017366
 Transform:
   m_ObjectHideFlags: 0
@@ -886,6 +887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnLocation: 1
+  enemyAmount: 0
   spawnCooldown: 2
   spawnTimer: 2
   enemy1: {fileID: 4381667209245078787, guid: 3eb68c7a74784e941a133b5a7ff45be8, type: 3}
@@ -2104,7 +2106,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  healthAmountText: {fileID: 2107889945}
+  gold: 0
+  goldAmountText: {fileID: 1428296955}
+  resourceHolder: {fileID: 743017364}
   bullet: {fileID: 1159707100341124524, guid: c216192919d189240b526395719b4b20, type: 3}
   weaponSpawn: {fileID: 291117303}
   bulletCooldown: 1
   bulletTimer: 1
+  updateVariables: 0
