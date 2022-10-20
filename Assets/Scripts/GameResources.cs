@@ -41,7 +41,7 @@ public class GameResources : MonoBehaviour
         {
             bulletExtraDamage += bulletDamageUpgradeAmount;
             player.GetComponent<Player>().gold -= bulletUpgradeDamgeCost;
-            bulletUpgradeDamgeCost *= 1.5f;
+            bulletUpgradeDamgeCost *= 2f;
 
             player.GetComponent<Player>().updateVariables = true;
             bulletUpgradeDamageCostText.text = bulletUpgradeDamgeCost.ToString("0");

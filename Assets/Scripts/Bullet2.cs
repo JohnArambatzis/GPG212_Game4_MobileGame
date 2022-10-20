@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet2 : MonoBehaviour
 {
     public GameObject resourceHolder;
     public GameObject enemy;
 
     public float moveSpeed = 5f;
     public float bulletDamage = 2;
-    public float timer = 5f;
 
 
     private Rigidbody2D rb;
@@ -17,7 +16,6 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        timer = 5f;
         enemy = GameObject.FindWithTag("Enemy");
         resourceHolder = GameObject.FindWithTag("Resource Holder");
 
@@ -37,15 +35,6 @@ public class Bullet : MonoBehaviour
         movement = direction;
 
         if (resourceHolder.GetComponent<EnemySpawner>().enemyAmount <= 0)
-        {
-            Destroy(gameObject);
-        }
-
-        if (timer > 0)
-        {
-            timer -= Time.deltaTime;
-        }
-        if (timer <= 0)
         {
             Destroy(gameObject);
         }
